@@ -1,0 +1,28 @@
+form {
+  width: 100%;
+  font-family: $police-text;
+  text-align: center;
+  background-color: $color-background;
+  & h1 {
+    font-family: $police-text;
+    font-size: 1.2em;
+    padding: 3% 14% 0 14%;
+  }
+  & .search {
+    width: 98%;
+    height: 50px;
+    color: $black;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    background-color: $shadow;
+    border: none;
+  }
+  & .fas {
+    color: $black;
+    opacity: 0.6;
+    position: absolute;
+    left: 26%;
+    top: 73px;
+  }
+}

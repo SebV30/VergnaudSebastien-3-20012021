@@ -1,0 +1,10 @@
+.explore {
+  @include button;
+  width: 220px;
+  margin-bottom: 60px;
+}
+.command {
+  @include button;
+  width: 190px;
+  margin: 50px 20% 85px;
+}

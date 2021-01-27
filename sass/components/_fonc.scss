@@ -1,0 +1,59 @@
+#fonc {
+  width: 100%;
+  margin-top: 50px;
+  & h2 {
+    margin-left: 2.5%;
+  }
+  & ol {
+    width: 85%;
+    padding: 0;
+  }
+  & li {
+    padding: 30px 10%;
+  }
+  & .fas {
+    padding-left: 5%;
+  }
+  & .fa-mobile-alt {
+    transform: scale(1.55, 1.3);
+    margin-left: 3px;
+    margin-right: 2px;
+    padding-right: 10px;
+  }
+  & .fa-list {
+    margin-right: 1px;
+    padding-right: 10px;
+  }
+  & .fa-store {
+    padding-right: 10px;
+  }
+
+  & ol {
+    margin: auto;
+    list-style: none;
+    counter-reset: li;
+  }
+  & li::before {
+    content: counter(li);
+    color: $white;
+    padding: 2px 0px 2px 6px;
+    background-color: $color-primary;
+    border-radius: 12px;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  & li {
+    counter-increment: li;
+    padding: 20px;
+    background-color: $color-background;
+    margin-bottom: 25px;
+    border-radius: 15px;
+  }
+  & li:hover {
+    background-color: lighten($color: $color-primary, $amount: 35);
+    & .fas {
+      color: $color-primary;
+    }
+  }
+}

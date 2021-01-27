@@ -1,0 +1,9 @@
+@mixin button {
+  height: 50px;
+  font-family: $police-text;
+  font-size: 0.95em;
+  color: $white;
+  border-radius: 25px;
+  box-shadow: $shadow;
+  background: linear-gradient(0, $color-primary, $color-secondary);
+}
