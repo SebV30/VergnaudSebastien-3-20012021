@@ -3,22 +3,20 @@ header {
   margin: auto;
   font-family: $police-logo_titre;
   display: flex;
-  justify-content: space-around;
 
   & p {
+    margin: auto;
     text-align: center;
     font-size: 1.5em;
-    margin: 10px;
+    padding: 20px 0 10px 0;
   }
   & a:visited {
     color: $black;
   }
-  & h1 {
-    text-align: center;
-    font-weight: $police-text;
-  }
-  & .fas {
+  & .fa-arrow-left {
+    position: absolute;
     text-align: left;
-    padding-top: 20px;
+    top: 30px;
+    left: 5%;
   }
 }
