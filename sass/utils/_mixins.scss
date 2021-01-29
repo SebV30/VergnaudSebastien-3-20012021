@@ -3,9 +3,27 @@
   height: 50px;
   font-family: $police-text;
   font-size: 0.95em;
-  color: $white;
+  color: $secondary-font-color;
   margin-bottom: $margin-bottom;
+  border: 0;
   border-radius: 25px;
-  box-shadow: $shadow;
+  box-shadow: 0px 3px 4px 2px $shadow;
   background: linear-gradient(0, $color-primary, $color-secondary);
+}
+
+@mixin tablette {
+  @media (min-width: $tablette-min) and (max-width: $tablette-max) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: $pc-ecran-min) and (max-width: $pc-ecran-max) {
+    @content;
+  }
+}
+@mixin pc-xl {
+  @media (min-width: $pc-ecran-xl-min) and (max-width: $pc-ecran-xl-max) {
+    @content;
+  }
 }

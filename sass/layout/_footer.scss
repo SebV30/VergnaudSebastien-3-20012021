@@ -2,23 +2,75 @@ footer {
   width: 100%;
   background-color: $footer;
   padding-bottom: 5px;
+  @include tablette {
+    display: flex;
+    flex-direction: column;
+  }
   & h2 {
     font-family: $police-logo_titre;
     font-weight: 100;
-    color: white;
+    color: $secondary-font-color;
     font-size: 1em;
     transform: scale(1.15, 1);
     padding-top: 5px;
     padding-left: 7%;
     margin: 0 40% 5px 0;
+    @include tablette {
+      font-size: 1.3em;
+      margin: 0 45% 5px 35%;
+      text-align: center;
+    }
+    @include pc {
+      font-size: 1.5em;
+      margin: 0 45% 5px 35%;
+      text-align: center;
+    }
+    @include pc-xl {
+      font-size: 1.7em;
+      margin: 0 45% 5px 35%;
+      text-align: center;
+    }
   }
   & ul {
     list-style-type: none;
     padding-left: 5%;
     line-height: 30px;
+    @include tablette {
+      font-size: 1.15em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include pc {
+      font-size: 1.2em;
+      padding-left: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+    @include pc-xl {
+      font-size: 1.2em;
+      padding-left: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    & .haut {
+      @include tablette {
+        display: flex;
+        flex-direction: row;
+        margin: 0 100px 15px 0;
+      }
+    }
+    & .bas {
+      @include tablette {
+        display: flex;
+        flex-direction: row;
+        margin-right: 100px;
+      }
+    }
   }
   & a {
-    color: white;
+    color: $secondary-font-color;
     text-decoration: none;
     & .fa-hands-helping {
       transform: scale(0.6, 1);

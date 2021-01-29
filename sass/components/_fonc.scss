@@ -32,16 +32,34 @@
     margin: auto;
     list-style: none;
     counter-reset: li;
+    @include tablette {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include pc {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+    @include pc-xl {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
   }
   & li::before {
     content: counter(li);
-    color: $white;
+    color: $secondary-font-color;
     padding: 2px 0px 2px 6px;
     background-color: $color-primary;
     border-radius: 12px;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+    position: absolute;
+    left: 7px;
   }
   & li {
     counter-increment: li;
@@ -49,6 +67,28 @@
     background-color: $color-background;
     margin-bottom: 25px;
     border-radius: 15px;
+    position: relative;
+    @include tablette {
+      width: 25%;
+      font-size: 1em;
+      padding: 20px 30px 20px 10px;
+      margin: 30px 2% 30px 2%;
+      white-space: nowrap;
+    }
+    @include pc {
+      width: 25%;
+      font-size: 1.05em;
+      padding: 20px 0 20px 60px;
+      margin: 30px 2% 30px 2%;
+      white-space: nowrap;
+    }
+    @include pc-xl {
+      width: 25%;
+      font-size: 1.1em;
+      padding: 20px 0 20px 60px;
+      margin: 30px 5% 30px 5%;
+      white-space: nowrap;
+    }
   }
   & li:hover {
     background-color: lighten($color: $color-primary, $amount: 35);
