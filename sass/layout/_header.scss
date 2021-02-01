@@ -1,0 +1,31 @@
+header {
+  width: 95%;
+  margin: auto;
+  font-family: $police-logo_titre;
+  display: flex;
+
+  & p {
+    margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px 0 10px 0;
+  }
+  & a:visited {
+    color: $primary-font-color;
+  }
+  & .fa-arrow-left {
+    position: absolute;
+    text-align: left;
+    top: 30px;
+    left: 12%;
+    @include tablette {
+      left: 20%;
+    }
+    @include pc {
+      left: 25%;
+    }
+    @include pc-xl {
+      left: 30%;
+    }
+  }
+}
