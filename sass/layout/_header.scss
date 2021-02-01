@@ -17,6 +17,15 @@ header {
     position: absolute;
     text-align: left;
     top: 30px;
-    left: 5%;
+    left: 12%;
+    @include tablette {
+      left: 20%;
+    }
+    @include pc {
+      left: 25%;
+    }
+    @include pc-xl {
+      left: 30%;
+    }
   }
 }

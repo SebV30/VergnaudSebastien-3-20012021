@@ -74,6 +74,7 @@
       padding: 20px 30px 20px 10px;
       margin: 30px 2% 30px 2%;
       white-space: nowrap;
+      box-shadow: 0 3px 8px lighten($color: $footer, $amount: 30);
     }
     @include pc {
       width: 25%;
@@ -81,6 +82,7 @@
       padding: 20px 0 20px 60px;
       margin: 30px 2% 30px 2%;
       white-space: nowrap;
+      box-shadow: 0 3px 8px lighten($color: $footer, $amount: 30);
     }
     @include pc-xl {
       width: 25%;
@@ -88,10 +90,13 @@
       padding: 20px 0 20px 60px;
       margin: 30px 5% 30px 5%;
       white-space: nowrap;
+      box-shadow: 0 3px 8px lighten($color: $footer, $amount: 30);
     }
   }
   & li:hover {
     background-color: lighten($color: $color-primary, $amount: 35);
+    box-shadow: 0 3px 8px lighten($color: $color-primary, $amount: 20);
+
     & .fas {
       color: $color-primary;
     }

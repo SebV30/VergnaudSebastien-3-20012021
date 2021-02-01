@@ -29,9 +29,27 @@ img {
 .menu {
   list-style-type: none;
   color: $primary-font-color;
+  @include pc {
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  @include pc-xl {
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+  }
+
   & h2 {
     font-weight: 100;
     padding-left: 3%;
+    @include tablette {
+      text-align: center;
+    }
+    @include pc-xl {
+      text-align: center;
+    }
     & .underline {
       border-bottom: 3px solid $color-tertiary;
     }
@@ -40,6 +58,13 @@ img {
     width: 95%;
     margin-left: 2.5%;
     background-color: $color-background;
+    @include pc {
+      width: 40%;
+    }
+    @include pc-xl {
+      width: 30%;
+    }
+
     & a:visited {
       color: $primary-font-color;
     }
@@ -55,10 +80,24 @@ img {
       & h3 {
         font-size: 0.95em;
         margin: 0;
+        @include pc {
+          font-size: 105%;
+        }
+        @include pc-xl {
+          font-size: 105%;
+        }
       }
       & p {
         font-size: 0.8em;
         margin: 5px 0;
+        @include pc {
+          font-size: 105%;
+          font-weight: 100;
+        }
+        @include pc-xl {
+          font-size: 105%;
+          font-weight: 100;
+        }
       }
       & .prix {
         font-size: 0.8em;

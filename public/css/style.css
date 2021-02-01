@@ -23,7 +23,22 @@ header .fa-arrow-left {
   position: absolute;
   text-align: left;
   top: 30px;
-  left: 5%;
+  left: 12%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .fa-arrow-left {
+    left: 20%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  header .fa-arrow-left {
+    left: 25%;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  header .fa-arrow-left {
+    left: 30%;
+  }
 }
 
 form {
@@ -38,6 +53,7 @@ form {
     padding-top: 15px;
     margin: auto;
     border-radius: 35px;
+    box-shadow: 0 3px 8px #828282;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
@@ -46,6 +62,7 @@ form {
     padding-top: 15px;
     margin: auto;
     border-radius: 35px;
+    box-shadow: 0 3px 8px #828282;
   }
 }
 form h1 {
@@ -60,7 +77,7 @@ form .search {
   text-align: center;
   font-size: 0.9em;
   font-weight: 600;
-  background-color: #d3d3d3;
+  background-color: #e0e0e0;
   border: none;
   box-shadow: inset 0 2px 3px #828282;
 }
@@ -75,6 +92,9 @@ form .search {
     width: 75%;
     margin: auto;
   }
+}
+form .search::placeholder {
+  color: #000000;
 }
 form .fa-map-marker-alt {
   color: #000000;
@@ -97,7 +117,7 @@ form .fa-map-marker-alt {
 @media (min-width: 1441px) and (max-width: 1920px) {
   form .fa-map-marker-alt {
     top: 99px;
-    left: 36%;
+    left: 42%;
   }
 }
 
@@ -227,6 +247,7 @@ form .fa-map-marker-alt {
     padding: 20px 30px 20px 10px;
     margin: 30px 2% 30px 2%;
     white-space: nowrap;
+    box-shadow: 0 3px 8px #828282;
   }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -236,6 +257,7 @@ form .fa-map-marker-alt {
     padding: 20px 0 20px 60px;
     margin: 30px 2% 30px 2%;
     white-space: nowrap;
+    box-shadow: 0 3px 8px #828282;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
@@ -245,10 +267,12 @@ form .fa-map-marker-alt {
     padding: 20px 0 20px 60px;
     margin: 30px 5% 30px 5%;
     white-space: nowrap;
+    box-shadow: 0 3px 8px #828282;
   }
 }
 #fonc li:hover {
   background-color: #f2eafb;
+  box-shadow: 0 3px 8px #c9abee;
 }
 #fonc li:hover .fas {
   color: #9356dc;
@@ -274,7 +298,6 @@ form .fa-map-marker-alt {
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   .restaurants .resp-tab {
-    margin: 0 -5%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -282,7 +305,6 @@ form .fa-map-marker-alt {
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
   .restaurants .resp-tab {
-    margin: 0 -5%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -298,12 +320,12 @@ form .fa-map-marker-alt {
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   .restaurants article {
-    max-width: 21%;
+    max-width: 40%;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
   .restaurants article {
-    max-width: 33%;
+    max-width: 40%;
   }
 }
 .restaurants article .post-new {
@@ -325,12 +347,12 @@ form .fa-map-marker-alt {
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   .restaurants article .new {
-    left: 62%;
+    left: 81%;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
   .restaurants article .new {
-    left: 73%;
+    left: 83%;
   }
 }
 .restaurants article .liste-resto {
@@ -421,7 +443,7 @@ footer h2 {
     font-size: 1.5em;
     margin: 0 45% 5px 35%;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
@@ -429,7 +451,7 @@ footer h2 {
     font-size: 1.7em;
     margin: 0 45% 5px 35%;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 20px;
   }
 }
 footer ul {
@@ -448,6 +470,7 @@ footer ul {
 @media (min-width: 1025px) and (max-width: 1440px) {
   footer ul {
     font-size: 1.2em;
+    margin-bottom: 25px;
     padding-left: 0;
     display: flex;
     justify-content: space-around;
@@ -456,6 +479,7 @@ footer ul {
 @media (min-width: 1441px) and (max-width: 1920px) {
   footer ul {
     font-size: 1.2em;
+    margin-bottom: 30px;
     padding-left: 0;
     display: flex;
     justify-content: space-around;
@@ -523,9 +547,34 @@ img {
   list-style-type: none;
   color: #000000;
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu {
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .menu {
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .menu h2 {
   font-weight: 100;
   padding-left: 3%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu h2 {
+    text-align: center;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .menu h2 {
+    text-align: center;
+  }
 }
 .menu h2 .underline {
   border-bottom: 3px solid #99e2d0;
@@ -534,6 +583,16 @@ img {
   width: 95%;
   margin-left: 2.5%;
   background-color: #f5f5f5;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu article {
+    width: 40%;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .menu article {
+    width: 30%;
+  }
 }
 .menu article a:visited {
   color: #000000;
@@ -552,9 +611,31 @@ img {
   font-size: 0.95em;
   margin: 0;
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu article .description h3 {
+    font-size: 105%;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .menu article .description h3 {
+    font-size: 105%;
+  }
+}
 .menu article .description p {
   font-size: 0.8em;
   margin: 5px 0;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .menu article .description p {
+    font-size: 105%;
+    font-weight: 100;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .menu article .description p {
+    font-size: 105%;
+    font-weight: 100;
+  }
 }
 .menu article .description .prix {
   font-size: 0.8em;

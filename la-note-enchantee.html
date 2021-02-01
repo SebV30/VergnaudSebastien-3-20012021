@@ -11,9 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <!--Police Roboto-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <title>La note enchantée</title>
+    <title>Ohmyfood</title>
 </head>
 
 <body>
@@ -21,112 +22,111 @@
     <header>
         <a href="index.html"><i class="fas fa-arrow-left"></i></a>
         <p>ohmyfood</p>
+
     </header>
 
     <!-- Carte -->
+    <img src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Menu La note enchantée">
     <div class="carte">
-        <img src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo plat">
-        <h1>La palette du goût<span class="heart"><i class="far fa-heart"></i></span></h1>
+        <h1>La note enchantée<i class="far fa-heart heart"></i></h1>
 
         <!-- ENTREES -->
 
-        <section id="menu">
-            <h2><span>ENTR</span>ÉES</h2>
-            <article class="description">
-                <h3>Ravioles de foie gras</h3>
-                <div class="accomp-px">
-                    <p>Accompagnés de leur crème à la truffe</p>
-                    <p>25€</p>
-                </div>
+        <section class="menu">
+            <article>
+                <h2><span class="underline">ENTR</span>ÉES</h2>
+                <a href="#" class="description">
+                    <h3>Ravioles de foie gras </h3>
+                    <div class="accomp-px">
+                        <p>Accompagnés de leur crème à la truffe</p>
+                        <p class="prix">25€</p>
+                    </div>
+                </a>
+                <a href="#" class="description">
+                    <h3>Caviar osciètre</h3>
+                    <div class="accomp-px">
+                        <p>Sur blini à la farine de blé noir</p>
+                        <p class="prix">35€</p>
+                    </div>
+                </a>
+                <a href="#" class="description">
+                    <h3>Homard et espuma de potiron</h3>
+                    <div class="accomp-px">
+                        <p>Mariné aux zestes d'orange</p>
+                        <p class="prix">20€</p>
+                    </div>
+                </a>
+                <a href="#" class="description">
+                    <h3>Foie gras de canard cuit entier</h3>
+                    <div class="accomp-px">
+                        <p>Confiture de figue et pain toasté</p>
+                        <p class="prix">35€</p>
+                    </div>
+                </a>
             </article>
-            <article class="description">
-                <h3>Caviar osciètre</h3>
-                <div class="accomp-px">
-                    <p>Sur blini à la farine de blé noir</p>
-                    <p>35€</p>
-                </div>
+            <!-- PLATS -->
+            <article>
+                <h2><span class="underline">PLAT</span>S</h2>
+                <a href="#" class="description">
+                    <h3>Noix de coquilles Saint-Jacques</h3>
+                    <div class="accomp-px">
+                        <p>Sur lit de purée de céleri-rave</p>
+                        <p class="prix">40€</p>
+                    </div>
+                </a>
+                <a href="#" class="description">
+                    <h3>Langoustine poêlée</h3>
+                    <div class="accomp-px">
+                        <p>Purée de patate douce</p>
+                        <p class="prix">35€</p>
+                    </div>
+                </a>
+                <a href="#" class="description">
+                    <h3>Mijoté de queue de boeuf</h3>
+                    <div class="accomp-px">
+                        <p>Et riz sauvage aux zestes de citron</p>
+                        <p class="prix">44€</p>
+                    </div>
+                </a>
             </article>
-            <article class="description">
-                <h3>Homard et espuma de potiron</h3>
-                <div class="accomp-px">
-                    <p>Mariné aux zestes d'orange</p>
-                    <p>20€</p>
-                </div>
-            </article>
-            <article class="description">
-                <h3>Foie gras de canard cuit entier</h3>
-                <div class="accomp-px">
-                    <p>Confiture de figue et pain toasté</p>
-                    <p>35€</p>
-                </div>
-            </article>
-        </section>
-
-        <!-- PLATS -->
-
-        <section id="menu">
-            <h2><span>PLAT</span>S</h2>
-            <article class="description">
-                <h3>Noix de coquilles Saint-Jacques</h3>
-                <div class="accomp-px">
-                    <p>Sur lit de purée de céleri-rave</p>
-                    <p>40€</p>
-                </div>
-            </article>
-            <article class="description">
-                <h3>Langoustine poêlée</h3>
-                <div class="accomp-px">
-                    <p>Purée de patate douce</p>
-                    <p>35€</p>
-                </div>
-            </article>
-            <article class="description">
-                <h3>Mijoté de queue de boeuf</h3>
-                <div class="accomp-px">
-                    <p>Et riz sauvage aux zestes de citron</p>
-                    <p>44€</p>
-                </div>
-            </article>
-        </section>
-
-        <!-- DESSERTS -->
-
-        <section id="menu">
-            <h2><span>DESS</span>ERTS</h2>
-            <article class="description">
-                <h3>Macaron noisette et chocolat</h3>
-                <div class="accomp-px">
-                    <p>Glace au caramel brun et sel de Guérande</p>
-                    <p>18€</p>
-                </div>
-            </article>
-            <article class="description">
-                <h3>Baba au rhum revisité</h3>
-                <div class="accomp-px">
-                    <p>Avec son coulis de citron</p>
-                    <p>22€</p>
-                </div>
-            </article>
-            <article class="description">
-                <h3>Tarte au citron meringuée</h3>
-                <div class="accomp-px">
-                    <p>Déstructurée</p>
-                    <p>23€</p>
-                </div>
+            <!-- DESSERTS -->
+            <article>
+                <h2><span class="underline">DESS</span>ERTS</h2>
+                <a href="#" class="description">
+                    <h3>Macaron noisette et chocolat</h3>
+                    <div class="accomp-px">
+                        <p>Glace au caramel brun et sel de Guérande</p>
+                        <p class="prix">18€</p>
+                    </div>
+                </a>
+                <a href="#" class="description">
+                    <h3>Baba au rhum revisité</h3>
+                    <div class="accomp-px">
+                        <p>Avec son coulis de citron</p>
+                        <p class="prix">22€</p>
+                    </div>
+                </a>
+                <a href="#" class="description">
+                    <h3>Tarte au citron meringuée</h3>
+                    <div class="accomp-px">
+                        <p>Déstructurée</p>
+                        <p class="prix">23€</p>
+                    </div>
+                </a>
             </article>
         </section>
+        <input class="command" type="submit" value="Commander" />
     </div>
 
-    <input type="submit" name="commande" value="Commander">
 
     <!-- Footer -->
     <footer>
         <h2>ohmyfood</h2>
         <ul>
-            <li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
-            <li><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="mailto:service-client@ohmyfood.com">Contact</a></li>
+            <li class="haut"><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+            <li class="haut"><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
+            <li class="bas"><a href="#">Mentions légales</a></li>
+            <li class="bas"><a href="mailto:service-client@ohmyfood.com">Contact</a></li>
         </ul>
     </footer>
 
