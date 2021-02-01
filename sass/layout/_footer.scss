@@ -24,11 +24,13 @@ footer {
       font-size: 1.5em;
       margin: 0 45% 5px 35%;
       text-align: center;
+      padding-top: 10px;
     }
     @include pc-xl {
       font-size: 1.7em;
       margin: 0 45% 5px 35%;
       text-align: center;
+      padding-top: 10px;
     }
   }
   & ul {

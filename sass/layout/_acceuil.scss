@@ -15,14 +15,16 @@
       margin: 0 5%;
     }
     @include pc {
-      width: 100%;
+      margin: 0 -5%;
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
     }
     @include pc-xl {
-      width: 100%;
+      margin: 0 -5%;
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
     }
   }
   & article {
@@ -32,21 +34,34 @@
     border-radius: 10px;
     box-shadow: 0 3px 8px lighten($color: $footer, $amount: 60);
     margin: 18px 2.5% 18px 2.5%;
-    & a {
-      text-decoration: none;
-      color: $primary-font-color;
+    @include pc {
+      max-width: 21%;
     }
-    & a:visited {
-      color: $primary-font-color;
+    @include pc-xl {
+      max-width: 33%;
     }
-    & .liste-resto-new {
-      display: flex;
-      justify-content: space-between;
-      margin-top: -30px;
-      & .heart {
-        margin-right: 30px;
-        padding-top: 10px;
-        transform: scale(1.5);
+
+    & .post-new {
+      width: 100%;
+      position: relative;
+    }
+    & .new {
+      width: 62px;
+      height: 18px;
+      color: darken($color: $color-tertiary, $amount: 50);
+      background-color: $color-tertiary;
+      padding: 5px;
+      border-radius: 3px;
+      justify-items: center;
+      align-items: center;
+      position: absolute;
+      bottom: 80%;
+      left: 74%;
+      @include pc {
+        left: 62%;
+      }
+      @include pc-xl {
+        left: 73%;
       }
     }
     & .liste-resto {
@@ -58,43 +73,40 @@
         padding-top: 10px;
         transform: scale(1.5);
       }
-    }
-    & .nom-lieu {
-      font-size: 80%;
-      margin: 2px 0 10px 0;
-      padding-left: 12px;
-      display: flex;
-      flex-direction: column;
-      & h3 {
-        padding-top: 5px;
-        margin-bottom: 0;
-      }
-      & p {
-        padding: 5px 0;
-        margin: 2px 0;
-        font-size: 115%;
-      }
-    }
-    & .new {
-      width: 80px;
-      height: 30px;
-      color: darken($color: $color-tertiary, $amount: 50);
-      background-color: $color-tertiary;
-      padding: 5px;
-      border-radius: 3px;
-      position: relative;
-      bottom: 160px;
-      margin-left: 73%;
-      @include tablette {
-        margin-left: 74%;
-      }
-      @include pc {
-        margin-left: 61%;
-      }
-      @include pc-xl {
-        margin-left: 72%;
+      & .nom-lieu {
+        font-size: 80%;
+        margin: 2px 0 10px 0;
+        padding-left: 12px;
+        display: flex;
+        flex-direction: column;
+        @include tablette {
+          font-size: 90%;
+        }
+        @include pc {
+          font-size: 90%;
+        }
+        @include pc-xl {
+          font-size: 90%;
+        }
+
+        & h3 {
+          padding-top: 5px;
+          margin-bottom: 0;
+        }
+        & p {
+          padding: 5px 0;
+          margin: 2px 0;
+          font-size: 115%;
+        }
       }
     }
+  }
+  & a {
+    text-decoration: none;
+    color: $primary-font-color;
+  }
+  & a:visited {
+    color: $primary-font-color;
   }
   & img {
     width: 100%;
