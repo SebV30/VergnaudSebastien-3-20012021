@@ -71,12 +71,12 @@ img {
     & .description {
       color: $primary-font-color;
       text-decoration: none;
-      padding: 10px 3%;
       background-color: $secondary-font-color;
       border-radius: 10px;
       margin-top: 15px;
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       & h3 {
         font-size: 0.95em;
         margin: 0;
@@ -103,14 +103,49 @@ img {
         font-size: 0.8em;
         font-weight: 600;
         color: $footer;
+        padding-top: 28px;
+      }
+      & .box {
+        width: 0;
+        background-color: $color-tertiary;
+        border-radius: 0 10px 10px 0;
+        margin-left: 2%;
+        display: flex;
+        & .check {
+          margin: auto;
+          transform: rotate(0);
+          & .fa-check-circle {
+            font-size: 2em;
+            color: $secondary-font-color;
+          }
+        }
+      }
+      &:hover {
+        .box {
+          width: 30%;
+          transition: 1000ms;
+          @include tablette {
+            width: 20%;
+          }
+        }
+        .check {
+          transform: rotate(1turn);
+          transition: transform 1000ms;
+          transition-delay: 200ms;
+        }
       }
     }
-    & .accomp-px {
-      text-overflow: "...";
-      white-space: nowrap;
-      margin-right: 3%;
-      display: flex;
-      justify-content: space-between;
+    & .plat {
+      padding: 10px;
+      margin-right: auto;
+      flex-grow: 1;
+      width: 5em;
+      & h3,
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
   }
 }

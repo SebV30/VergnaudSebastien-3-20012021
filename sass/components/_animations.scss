@@ -1,0 +1,20 @@
+@keyframes check {
+  from {
+    transform: translateX(0);
+    transition: 1000ms 200ms;
+  }
+  to {
+    display: initial;
+    transform: translateX(-70px) rotate(1turn);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@keyframes app-menu {
+  from {
+    transform: translateX(9999px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

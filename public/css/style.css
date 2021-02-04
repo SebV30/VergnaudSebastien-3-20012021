@@ -47,12 +47,14 @@ form .search {
 @media (min-width: 1025px) and (max-width: 1440px) {
   form .search {
     width: 75%;
+    border-radius: 30px;
     margin: auto;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
   form .search {
     width: 75%;
+    border-radius: 30px;
     margin: auto;
   }
 }
@@ -73,14 +75,16 @@ form .fa-map-marker-alt {
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   form .fa-map-marker-alt {
-    top: 99px;
+    top: 133px;
     left: 37%;
+    font-size: 105%;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
   form .fa-map-marker-alt {
-    top: 99px;
+    top: 133px;
     left: 42%;
+    font-size: 105%;
   }
 }
 
@@ -241,6 +245,26 @@ form .fa-map-marker-alt {
   color: #9356dc;
 }
 
+@keyframes check {
+  from {
+    transform: translateX(0);
+    transition: 1000ms 200ms;
+  }
+  to {
+    display: initial;
+    transform: translateX(-70px) rotate(1turn);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@keyframes app-menu {
+  from {
+    transform: translateX(9999px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 header {
   width: 95%;
   margin: auto;
@@ -252,6 +276,21 @@ header p {
   text-align: center;
   font-size: 1.5em;
   padding: 20px 0 10px 0;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header p {
+    left: 20%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  header p {
+    font-size: 3em;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  header p {
+    font-size: 3em;
+  }
 }
 header a:visited {
   color: #000000;
@@ -270,11 +309,15 @@ header .fa-arrow-left {
 @media (min-width: 1025px) and (max-width: 1440px) {
   header .fa-arrow-left {
     left: 25%;
+    font-size: 150%;
+    top: 40px;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
   header .fa-arrow-left {
     left: 30%;
+    font-size: 150%;
+    top: 40px;
   }
 }
 
@@ -600,12 +643,12 @@ img {
 .menu article .description {
   color: #000000;
   text-decoration: none;
-  padding: 10px 3%;
   background-color: #ffffff;
   border-radius: 10px;
   margin-top: 15px;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 .menu article .description h3 {
   font-size: 0.95em;
@@ -641,13 +684,48 @@ img {
   font-size: 0.8em;
   font-weight: 600;
   color: #353535;
+  padding-top: 28px;
 }
-.menu article .accomp-px {
-  text-overflow: "...";
-  white-space: nowrap;
-  margin-right: 3%;
+.menu article .description .box {
+  width: 0;
+  background-color: #99e2d0;
+  border-radius: 0 10px 10px 0;
+  margin-left: 2%;
   display: flex;
-  justify-content: space-between;
+}
+.menu article .description .box .check {
+  margin: auto;
+  transform: rotate(0);
+}
+.menu article .description .box .check .fa-check-circle {
+  font-size: 2em;
+  color: #ffffff;
+}
+.menu article .description:hover .box {
+  width: 30%;
+  transition: 1000ms;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu article .description:hover .box {
+    width: 20%;
+  }
+}
+.menu article .description:hover .check {
+  transform: rotate(1turn);
+  transition: transform 1000ms;
+  transition-delay: 200ms;
+}
+.menu article .plat {
+  padding: 10px;
+  margin-right: auto;
+  flex-grow: 1;
+  width: 5em;
+}
+.menu article .plat h3,
+.menu article .plat p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=style.css.map */

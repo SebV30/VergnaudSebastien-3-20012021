@@ -34,10 +34,12 @@ form {
     box-shadow: inset 0 2px 3px lighten($color: $footer, $amount: 30);
     @include pc {
       width: 75%;
+      border-radius: 30px;
       margin: auto;
     }
     @include pc-xl {
       width: 75%;
+      border-radius: 30px;
       margin: auto;
     }
     &::placeholder {
@@ -55,12 +57,14 @@ form {
       left: 37%;
     }
     @include pc {
-      top: 99px;
+      top: 133px;
       left: 37%;
+      font-size: 105%;
     }
     @include pc-xl {
-      top: 99px;
+      top: 133px;
       left: 42%;
+      font-size: 105%;
     }
   }
 }
