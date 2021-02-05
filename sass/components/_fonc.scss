@@ -96,9 +96,10 @@
   & li:hover {
     background-color: lighten($color: $color-primary, $amount: 35);
     box-shadow: 0 3px 8px lighten($color: $color-primary, $amount: 20);
-
-    & .fas {
+    transition: 300ms;
+    & .icon_fonc {
       color: $color-primary;
+      transition: 300ms;
     }
   }
 }
