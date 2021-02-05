@@ -112,22 +112,6 @@ form .fa-map-marker-alt {
   border-radius: 25px;
   box-shadow: 0px 3px 4px 2px #d3d3d3;
   background: linear-gradient(0, #9356dc, #ff79da);
-  margin: 30px 20%;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .command {
-    margin-left: 35%;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .command {
-    margin-left: 45%;
-  }
-}
-@media (min-width: 1441px) and (max-width: 1920px) {
-  .command {
-    margin-left: 45%;
-  }
 }
 
 #fonc {
@@ -247,20 +231,20 @@ form .fa-map-marker-alt {
   transition: 300ms;
 }
 
-@keyframes app-menu {
-  from {
-    transform: translateX(9999px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
 @keyframes heart-full {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes anim-menu {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
 header {
@@ -587,22 +571,22 @@ img {
   display: flex;
   justify-content: space-between;
 }
+.carte h1 .heart {
+  margin-right: 6%;
+}
 .carte h1 .heart .heart-empty {
-  margin-right: 30px;
-  padding-top: 10px;
-  transform: scale(1.5);
   position: relative;
-  top: 15px;
-  left: 15px;
+  top: 2px;
+  left: 28px;
 }
 .carte h1 .heart .heart-full {
-  transform: scale(1.25);
+  transform: scale(0.815, 0.78);
   background: linear-gradient(0, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
-  top: 19px;
-  right: 39px;
+  top: 2px;
+  left: 4px;
   opacity: 0;
 }
 .carte h1 .heart .heart-full:hover {
@@ -673,6 +657,9 @@ img {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+  width: 0;
+  animation: anim-menu 1500ms;
+  animation-fill-mode: forwards;
 }
 .menu article .description h3 {
   font-size: 0.95em;
@@ -758,6 +745,51 @@ img {
 }
 .menu article .description:hover .check {
   transform: rotate(1turn);
+}
+.menu article .choix-1 {
+  animation: anim-menu 1500ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+}
+.menu article .choix-2 {
+  animation: anim-menu 1500ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+}
+.menu article .choix-3 {
+  animation: anim-menu 1500ms;
+  animation-delay: 1500ms;
+  animation-fill-mode: forwards;
+}
+.menu article .choix-4 {
+  animation: anim-menu 1500ms;
+  animation-delay: 2000ms;
+  animation-fill-mode: forwards;
+}
+.menu article .choix-5 {
+  animation: anim-menu 1500ms;
+  animation-delay: 2500ms;
+  animation-fill-mode: forwards;
+}
+.menu article .choix-6 {
+  animation: anim-menu 1500ms;
+  animation-delay: 3000ms;
+  animation-fill-mode: forwards;
+}
+.menu article .choix-7 {
+  animation: anim-menu 1500ms;
+  animation-delay: 3500ms;
+  animation-fill-mode: forwards;
+}
+.menu article .choix-8 {
+  animation: anim-menu 1500ms;
+  animation-delay: 4000ms;
+  animation-fill-mode: forwards;
+}
+.menu article .choix-9 {
+  animation: anim-menu 1500ms;
+  animation-delay: 4500ms;
+  animation-fill-mode: forwards;
 }
 .menu article .plat {
   padding: 10px;

@@ -1,16 +1,16 @@
-@keyframes app-menu {
-  from {
-    transform: translateX(9999px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
 @keyframes heart-full {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes anim-menu {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
