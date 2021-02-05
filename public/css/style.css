@@ -114,6 +114,13 @@ form .fa-map-marker-alt {
   background: linear-gradient(0, #9356dc, #ff79da);
 }
 
+.command:hover,
+.explore:hover {
+  box-shadow: 0px 3px 4px 2px #6d6d6d;
+  background: linear-gradient(0, #a16be0, #ff93e1);
+  transition: 750ms;
+}
+
 #fonc {
   width: 100%;
   margin-top: 50px;
@@ -802,6 +809,12 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.btn-command {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

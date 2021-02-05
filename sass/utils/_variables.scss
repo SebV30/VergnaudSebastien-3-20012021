@@ -8,6 +8,19 @@ $secondary-font-color: #ffffff;
 $shadow: #d3d3d3;
 $footer: #353535;
 
+$dark: darken(
+  $color: $shadow,
+  $amount: 50,
+);
+$light-primary: lighten(
+  $color: $color-primary,
+  $amount: 50,
+);
+$light-second: lighten(
+  $color: $color-secondary,
+  $amount: 50,
+);
+
 $police-logo_titre: "Shrikhand";
 $police-text: "Roboto";
 
