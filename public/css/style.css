@@ -64,26 +64,27 @@ form .search::placeholder {
 form .fa-map-marker-alt {
   color: #000000;
   opacity: 0.6;
-  position: absolute;
-  left: 26%;
-  top: 84px;
+  position: relative;
+  z-index: 0;
+  right: 30%;
+  top: 37px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   form .fa-map-marker-alt {
-    left: 37%;
+    right: 20%;
   }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
   form .fa-map-marker-alt {
-    top: 133px;
-    left: 37%;
+    top: 0px;
+    left: 20%;
     font-size: 105%;
   }
 }
 @media (min-width: 1441px) and (max-width: 1920px) {
   form .fa-map-marker-alt {
-    top: 133px;
-    left: 42%;
+    top: 0;
+    left: 20%;
     font-size: 105%;
   }
 }
@@ -189,6 +190,7 @@ form .fa-map-marker-alt {
   margin-left: -1em;
   position: absolute;
   left: 7px;
+  z-index: 1;
 }
 #fonc li {
   counter-increment: li;
@@ -197,6 +199,7 @@ form .fa-map-marker-alt {
   margin-bottom: 25px;
   border-radius: 15px;
   position: relative;
+  z-index: 1;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #fonc li {
@@ -254,6 +257,160 @@ form .fa-map-marker-alt {
     width: 100%;
   }
 }
+@keyframes fix-load {
+  0% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes loader {
+  0% {
+    border-top-color: #d3d3d3;
+    border-right-color: #9356dc;
+    border-bottom-color: #ff79da;
+    border-left-color: #99e2d0;
+  }
+  13% {
+    border-top-color: #99e2d0;
+    border-right-color: #d3d3d3;
+    border-bottom-color: #9356dc;
+    border-left-color: #ff79da;
+  }
+  25% {
+    border-top-color: #ff79da;
+    border-right-color: #99e2d0;
+    border-bottom-color: #d3d3d3;
+    border-left-color: #9356dc;
+  }
+  37% {
+    border-top-color: #9356dc;
+    border-right-color: #ff79da;
+    border-bottom-color: #99e2d0;
+    border-left-color: #d3d3d3;
+  }
+  50% {
+    border-top-color: #d3d3d3;
+    border-right-color: #9356dc;
+    border-bottom-color: #ff79da;
+    border-left-color: #99e2d0;
+  }
+  63% {
+    border-top-color: #ff79da;
+    border-right-color: #99e2d0;
+    border-bottom-color: #d3d3d3;
+    border-left-color: #9356dc;
+  }
+  75% {
+    border-top-color: #9356dc;
+    border-right-color: #ff79da;
+    border-bottom-color: #99e2d0;
+    border-left-color: #d3d3d3;
+  }
+  88% {
+    border-top-color: #9356dc;
+    border-right-color: #ff79da;
+    border-bottom-color: #99e2d0;
+    border-left-color: #d3d3d3;
+  }
+  100% {
+    border-top-color: #d3d3d3;
+    border-right-color: #9356dc;
+    border-bottom-color: #ff79da;
+    border-left-color: #99e2d0;
+  }
+}
+@keyframes bienvenue {
+  00% {
+    transform: scale(0);
+    color: #9356dc;
+  }
+  20% {
+    transform: scale(1);
+    color: #9356dc;
+  }
+  40% {
+    transform: scale(0);
+    color: #ff79da;
+  }
+  60% {
+    transform: scale(1);
+    color: #ff79da;
+  }
+  80% {
+    transform: scale(0);
+    color: #99e2d0;
+  }
+  100% {
+    transform: scale(1);
+    color: #99e2d0;
+  }
+}
+.fix-load {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 2;
+  animation: fix-load 3s;
+  animation-fill-mode: both;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid;
+  border-top-color: #d3d3d3;
+  border-right-color: #9356dc;
+  border-bottom-color: #ff79da;
+  border-left-color: #99e2d0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 75px;
+  font-family: "Shrikhand";
+  font-size: 2em;
+  position: relative;
+  margin: auto;
+  transform: rotate(0);
+  animation: loader 3s;
+  animation-fill-mode: forwards;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .loader {
+    border: 15px solid;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .loader {
+    border: 15px solid;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .loader {
+    border: 15px solid;
+  }
+}
+
+.bienvenue {
+  color: #9356dc;
+  position: relative;
+  top: 25px;
+  right: 30px;
+  transform: scale(0);
+  animation: bienvenue 3s;
+  animation-fill-mode: forwards;
+}
+
 header {
   width: 95%;
   margin: auto;
@@ -286,6 +443,7 @@ header a:visited {
 }
 header .fa-arrow-left {
   position: absolute;
+  z-index: 0;
   text-align: left;
   top: 30px;
   left: 12%;
@@ -363,6 +521,7 @@ header .fa-arrow-left {
 .restaurants article .post-new {
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 .restaurants article .new {
   width: 62px;
@@ -374,6 +533,7 @@ header .fa-arrow-left {
   justify-items: center;
   align-items: center;
   position: absolute;
+  z-index: 1;
   top: 10px;
   right: 10px;
 }
@@ -387,6 +547,7 @@ header .fa-arrow-left {
   padding-top: 10px;
   transform: scale(1.5);
   position: relative;
+  z-index: 1;
   top: 15px;
   left: 15px;
 }
@@ -396,6 +557,7 @@ header .fa-arrow-left {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+  z-index: 1;
   top: 18px;
   right: 31px;
   opacity: 0;
@@ -567,7 +729,7 @@ img {
   padding-bottom: 30px;
   margin-top: -50px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .carte h1 {
   font-family: "Shrikhand";
@@ -583,6 +745,7 @@ img {
 }
 .carte h1 .heart .heart-empty {
   position: relative;
+  z-index: 1;
   top: 2px;
   left: 28px;
 }
@@ -592,6 +755,7 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+  z-index: 1;
   top: 2px;
   left: 4px;
   opacity: 0;
@@ -665,7 +829,7 @@ img {
   display: flex;
   justify-content: space-between;
   width: 0;
-  animation: anim-menu 1500ms;
+  animation: anim-menu 1000ms;
   animation-fill-mode: forwards;
 }
 .menu article .description h3 {
@@ -754,48 +918,48 @@ img {
   transform: rotate(1turn);
 }
 .menu article .choix-1 {
-  animation: anim-menu 1500ms;
-  animation-delay: 500ms;
+  animation: anim-menu 1000ms;
+  animation-delay: 250ms;
   animation-fill-mode: forwards;
 }
 .menu article .choix-2 {
-  animation: anim-menu 1500ms;
-  animation-delay: 1000ms;
+  animation: anim-menu 1000ms;
+  animation-delay: 500ms;
   animation-fill-mode: forwards;
 }
 .menu article .choix-3 {
-  animation: anim-menu 1500ms;
-  animation-delay: 1500ms;
+  animation: anim-menu 1000ms;
+  animation-delay: 750ms;
   animation-fill-mode: forwards;
 }
 .menu article .choix-4 {
-  animation: anim-menu 1500ms;
-  animation-delay: 2000ms;
+  animation: anim-menu 1000ms;
+  animation-delay: 1000ms;
   animation-fill-mode: forwards;
 }
 .menu article .choix-5 {
-  animation: anim-menu 1500ms;
-  animation-delay: 2500ms;
+  animation: anim-menu 1000ms;
+  animation-delay: 1250ms;
   animation-fill-mode: forwards;
 }
 .menu article .choix-6 {
-  animation: anim-menu 1500ms;
-  animation-delay: 3000ms;
+  animation: anim-menu 1000ms;
+  animation-delay: 1500ms;
   animation-fill-mode: forwards;
 }
 .menu article .choix-7 {
-  animation: anim-menu 1500ms;
-  animation-delay: 3500ms;
+  animation: anim-menu 1000ms;
+  animation-delay: 1750ms;
   animation-fill-mode: forwards;
 }
 .menu article .choix-8 {
-  animation: anim-menu 1500ms;
-  animation-delay: 4000ms;
+  animation: anim-menu 1000ms;
+  animation-delay: 2000ms;
   animation-fill-mode: forwards;
 }
 .menu article .choix-9 {
-  animation: anim-menu 1500ms;
-  animation-delay: 4500ms;
+  animation: anim-menu 1000ms;
+  animation-delay: 2250ms;
   animation-fill-mode: forwards;
 }
 .menu article .plat {

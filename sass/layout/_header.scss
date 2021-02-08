@@ -24,6 +24,7 @@ header {
   }
   & .fa-arrow-left {
     position: absolute;
+    z-index: 0;
     text-align: left;
     top: 30px;
     left: 12%;
