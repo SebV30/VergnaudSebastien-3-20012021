@@ -60,6 +60,7 @@
     margin-left: -1em;
     position: absolute;
     left: 7px;
+    z-index: 1;
   }
   & li {
     counter-increment: li;
@@ -68,6 +69,7 @@
     margin-bottom: 25px;
     border-radius: 15px;
     position: relative;
+    z-index: 1;
     @include tablette {
       width: 25%;
       font-size: 1em;
@@ -96,9 +98,10 @@
   & li:hover {
     background-color: lighten($color: $color-primary, $amount: 35);
     box-shadow: 0 3px 8px lighten($color: $color-primary, $amount: 20);
-
-    & .fas {
+    transition: 300ms;
+    & .icon_fonc {
       color: $color-primary;
+      transition: 300ms;
     }
   }
 }

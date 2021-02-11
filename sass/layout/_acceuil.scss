@@ -42,6 +42,7 @@
     & .post-new {
       width: 100%;
       position: relative;
+      z-index: 1;
     }
     & .new {
       width: 62px;
@@ -53,23 +54,39 @@
       justify-items: center;
       align-items: center;
       position: absolute;
-      bottom: 80%;
-      left: 74%;
-      @include pc {
-        left: 81%;
-      }
-      @include pc-xl {
-        left: 83%;
-      }
+      z-index: 1;
+      top: 10px;
+      right: 10px;
     }
     & .liste-resto {
       display: flex;
       justify-content: space-between;
       margin-top: -5px;
       & .heart {
-        margin-right: 30px;
-        padding-top: 10px;
-        transform: scale(1.5);
+        & .heart-empty {
+          margin-right: 30px;
+          padding-top: 10px;
+          transform: scale(1.5);
+          position: relative;
+          z-index: 1;
+          top: 15px;
+          left: 15px;
+        }
+        & .heart-full {
+          transform: scale(1.25);
+          background: linear-gradient(0, $color-secondary, $color-primary);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          position: relative;
+          z-index: 1;
+          top: 18px;
+          right: 31px;
+          opacity: 0;
+        }
+        .heart-full:hover {
+          animation: heart-full 1500ms;
+          animation-fill-mode: forwards;
+        }
       }
       & .nom-lieu {
         font-size: 80%;

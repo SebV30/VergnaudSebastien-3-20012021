@@ -1,16 +1,11 @@
 .explore {
   @include button(220px, 60px);
 }
+
 .command {
   @include button(190px, 30px);
-  margin: 30px 20%;
-  @include tablette {
-    margin-left: 35%;
-  }
-  @include pc {
-    margin-left: 45%;
-  }
-  @include pc-xl {
-    margin-left: 45%;
-  }
+}
+.command:hover,
+.explore:hover {
+  @include button-hover;
 }

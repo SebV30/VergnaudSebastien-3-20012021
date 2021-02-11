@@ -11,7 +11,7 @@ img {
   padding-bottom: 30px;
   margin-top: -50px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 
   & h1 {
     font-family: $police-logo_titre;
@@ -23,6 +23,27 @@ img {
     justify-content: space-between;
     & .heart {
       margin-right: 6%;
+      & .heart-empty {
+        position: relative;
+        z-index: 1;
+        top: 2px;
+        left: 28px;
+      }
+      & .heart-full {
+        transform: scale(0.815, 0.78);
+        background: linear-gradient(0, $color-secondary, $color-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        z-index: 1;
+        top: 2px;
+        left: 4px;
+        opacity: 0;
+      }
+      .heart-full:hover {
+        animation: heart-full 1500ms;
+        animation-fill-mode: forwards;
+      }
     }
   }
 }
@@ -71,12 +92,16 @@ img {
     & .description {
       color: $primary-font-color;
       text-decoration: none;
-      padding: 10px 3%;
       background-color: $secondary-font-color;
       border-radius: 10px;
       margin-top: 15px;
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      width: 0;
+      animation: anim-menu 1000ms;
+      animation-fill-mode: forwards;
+
       & h3 {
         font-size: 0.95em;
         margin: 0;
@@ -103,14 +128,113 @@ img {
         font-size: 0.8em;
         font-weight: 600;
         color: $footer;
+        padding-top: 28px;
+        @include tablette {
+          font-size: 0.9em;
+        }
+      }
+      & .box {
+        width: 0;
+        background-color: $color-tertiary;
+        border-radius: 0 10px 10px 0;
+        margin-left: 2%;
+        display: flex;
+        transition: width 1000ms;
+        & .check {
+          margin: auto;
+          transform: rotate(0);
+          transition: transform 800ms;
+          transition-delay: 200ms;
+          & .fa-check-circle {
+            font-size: 1.3em;
+            color: $secondary-font-color;
+            @include tablette {
+              font-size: 2em;
+            }
+            @include pc {
+              font-size: 1.7em;
+            }
+            @include pc-xl {
+              font-size: 1.7em;
+            }
+          }
+        }
+      }
+      &:hover {
+        .box {
+          width: 18%;
+          @include tablette {
+            width: 15%;
+          }
+        }
+        .check {
+          transform: rotate(1turn);
+        }
       }
     }
-    & .accomp-px {
-      text-overflow: "...";
-      white-space: nowrap;
-      margin-right: 3%;
-      display: flex;
-      justify-content: space-between;
+
+    & .choix-1 {
+      animation: anim-menu 1000ms;
+      animation-delay: 250ms;
+      animation-fill-mode: both;
+    }
+    & .choix-2 {
+      animation: anim-menu 1000ms;
+      animation-delay: 500ms;
+      animation-fill-mode: both;
+    }
+    & .choix-3 {
+      animation: anim-menu 1000ms;
+      animation-delay: 750ms;
+      animation-fill-mode: both;
+    }
+    & .choix-4 {
+      animation: anim-menu 1000ms;
+      animation-delay: 1000ms;
+      animation-fill-mode: both;
+    }
+    & .choix-5 {
+      animation: anim-menu 1000ms;
+      animation-delay: 1250ms;
+      animation-fill-mode: both;
+    }
+    & .choix-6 {
+      animation: anim-menu 1000ms;
+      animation-delay: 1500ms;
+      animation-fill-mode: both;
+    }
+    & .choix-7 {
+      animation: anim-menu 1000ms;
+      animation-delay: 1750ms;
+      animation-fill-mode: both;
+    }
+    & .choix-8 {
+      animation: anim-menu 1000ms;
+      animation-delay: 2000ms;
+      animation-fill-mode: both;
+    }
+    & .choix-9 {
+      animation: anim-menu 1000ms;
+      animation-delay: 2250ms;
+      animation-fill-mode: both;
+    }
+
+    & .plat {
+      padding: 10px;
+      margin-right: auto;
+      flex-grow: 1;
+      width: 5em;
+      & h3,
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
   }
+}
+.btn-command {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }

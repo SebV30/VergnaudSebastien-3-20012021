@@ -1,0 +1,104 @@
+@keyframes heart-full {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim-menu {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes fix-load {
+  0% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes loader {
+  0% {
+    border-top-color: $shadow;
+    border-right-color: $color-primary;
+    border-bottom-color: $color-secondary;
+    border-left-color: $color-tertiary;
+  }
+  13% {
+    border-top-color: $color-tertiary;
+    border-right-color: $shadow;
+    border-bottom-color: $color-primary;
+    border-left-color: $color-secondary;
+  }
+  25% {
+    border-top-color: $color-secondary;
+    border-right-color: $color-tertiary;
+    border-bottom-color: $shadow;
+    border-left-color: $color-primary;
+  }
+  37% {
+    border-top-color: $color-primary;
+    border-right-color: $color-secondary;
+    border-bottom-color: $color-tertiary;
+    border-left-color: $shadow;
+  }
+  50% {
+    border-top-color: $shadow;
+    border-right-color: $color-primary;
+    border-bottom-color: $color-secondary;
+    border-left-color: $color-tertiary;
+  }
+  63% {
+    border-top-color: $color-secondary;
+    border-right-color: $color-tertiary;
+    border-bottom-color: $shadow;
+    border-left-color: $color-primary;
+  }
+  75% {
+    border-top-color: $color-primary;
+    border-right-color: $color-secondary;
+    border-bottom-color: $color-tertiary;
+    border-left-color: $shadow;
+  }
+  88% {
+    border-top-color: $color-primary;
+    border-right-color: $color-secondary;
+    border-bottom-color: $color-tertiary;
+    border-left-color: $shadow;
+  }
+  100% {
+    border-top-color: $shadow;
+    border-right-color: $color-primary;
+    border-bottom-color: $color-secondary;
+    border-left-color: $color-tertiary;
+  }
+}
+@keyframes bienvenue {
+  0% {
+    color: $color-primary;
+  }
+  20% {
+    color: $color-primary;
+  }
+  40% {
+    color: $color-secondary;
+  }
+  60% {
+    color: $color-secondary;
+  }
+  80% {
+    color: $color-tertiary;
+  }
+  100% {
+    color: $color-tertiary;
+  }
+}
