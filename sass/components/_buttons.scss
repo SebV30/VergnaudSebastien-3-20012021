@@ -1,0 +1,11 @@
+.explore {
+  @include button(220px, 60px);
+}
+
+.command {
+  @include button(190px, 30px);
+}
+.command:hover,
+.explore:hover {
+  @include button-hover;
+}

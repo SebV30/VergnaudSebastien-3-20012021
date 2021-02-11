@@ -1,0 +1,71 @@
+form {
+  width: 100%;
+  font-family: $police-text;
+  text-align: center;
+  background-color: $color-background;
+  @include pc {
+    width: 80%;
+    padding-top: 15px;
+    margin: auto;
+    border-radius: 35px;
+    box-shadow: 0 3px 8px lighten($color: $footer, $amount: 30);
+  }
+  @include pc-xl {
+    width: 80%;
+    padding-top: 15px;
+    margin: auto;
+    border-radius: 35px;
+    box-shadow: 0 3px 8px lighten($color: $footer, $amount: 30);
+  }
+  & h1 {
+    font-family: $police-text;
+    font-size: 1.2em;
+    padding: 3% 14% 0 14%;
+  }
+  & .search {
+    width: 99%;
+    height: 50px;
+    color: $primary-font-color;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    background-color: lighten($color: $shadow, $amount: 5);
+    border: none;
+    box-shadow: inset 0 2px 3px lighten($color: $footer, $amount: 30);
+    @include pc {
+      width: 75%;
+      border-radius: 30px;
+      margin: auto;
+    }
+    @include pc-xl {
+      width: 75%;
+      border-radius: 30px;
+      margin: auto;
+    }
+    &::placeholder {
+      color: $primary-font-color;
+    }
+  }
+
+  & .fa-map-marker-alt {
+    color: $primary-font-color;
+    opacity: 0.6;
+    position: relative;
+    z-index: 0;
+    right: 30%;
+    top: 37px;
+    @include tablette {
+      right: 20%;
+    }
+    @include pc {
+      top: 0px;
+      left: 20%;
+      font-size: 105%;
+    }
+    @include pc-xl {
+      top: 0;
+      left: 20%;
+      font-size: 105%;
+    }
+  }
+}
