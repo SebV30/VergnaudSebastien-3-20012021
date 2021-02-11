@@ -242,10 +242,10 @@ form .fa-map-marker-alt {
 }
 
 @keyframes heart-full {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -326,28 +326,22 @@ form .fa-map-marker-alt {
   }
 }
 @keyframes bienvenue {
-  00% {
-    transform: scale(0);
+  0% {
     color: #9356dc;
   }
   20% {
-    transform: scale(1);
     color: #9356dc;
   }
   40% {
-    transform: scale(0);
     color: #ff79da;
   }
   60% {
-    transform: scale(1);
     color: #ff79da;
   }
   80% {
-    transform: scale(0);
     color: #99e2d0;
   }
   100% {
-    transform: scale(1);
     color: #99e2d0;
   }
 }
@@ -406,7 +400,6 @@ form .fa-map-marker-alt {
   position: relative;
   top: 25px;
   right: 30px;
-  transform: scale(0);
   animation: bienvenue 3s;
   animation-fill-mode: forwards;
 }
@@ -920,47 +913,47 @@ img {
 .menu article .choix-1 {
   animation: anim-menu 1000ms;
   animation-delay: 250ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 .menu article .choix-2 {
   animation: anim-menu 1000ms;
   animation-delay: 500ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 .menu article .choix-3 {
   animation: anim-menu 1000ms;
   animation-delay: 750ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 .menu article .choix-4 {
   animation: anim-menu 1000ms;
   animation-delay: 1000ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 .menu article .choix-5 {
   animation: anim-menu 1000ms;
   animation-delay: 1250ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 .menu article .choix-6 {
   animation: anim-menu 1000ms;
   animation-delay: 1500ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 .menu article .choix-7 {
   animation: anim-menu 1000ms;
   animation-delay: 1750ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 .menu article .choix-8 {
   animation: anim-menu 1000ms;
   animation-delay: 2000ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 .menu article .choix-9 {
   animation: anim-menu 1000ms;
   animation-delay: 2250ms;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 .menu article .plat {
   padding: 10px;

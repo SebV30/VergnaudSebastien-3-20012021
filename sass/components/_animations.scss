@@ -1,8 +1,8 @@
 @keyframes heart-full {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -83,28 +83,22 @@
   }
 }
 @keyframes bienvenue {
-  00% {
-    transform: scale(0);
+  0% {
     color: $color-primary;
   }
   20% {
-    transform: scale(1);
     color: $color-primary;
   }
   40% {
-    transform: scale(0);
     color: $color-secondary;
   }
   60% {
-    transform: scale(1);
     color: $color-secondary;
   }
   80% {
-    transform: scale(0);
     color: $color-tertiary;
   }
   100% {
-    transform: scale(1);
     color: $color-tertiary;
   }
 }
