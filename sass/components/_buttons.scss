@@ -1,7 +1,8 @@
+/*  Bouton page Accueil  */
 .explore {
   @include button(220px, 60px);
 }
-
+/*  Bouton pages menu  */
 .command {
   @include button(190px, 30px);
 }

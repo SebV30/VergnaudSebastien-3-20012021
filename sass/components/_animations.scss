@@ -1,3 +1,4 @@
+/*  ANIMATION COEUR  */
 @keyframes heart-full {
   0% {
     opacity: 0;
@@ -6,6 +7,7 @@
     opacity: 1;
   }
 }
+/* ANIMATION MENUS  */
 @keyframes anim-menu {
   from {
     width: 0;
@@ -14,6 +16,9 @@
     width: 100%;
   }
 }
+/*  ANIMATIONS LOADER  */
+
+/* Animation Arrière-plan  */
 @keyframes fix-load {
   0% {
     opacity: 1;
@@ -26,6 +31,7 @@
     display: none;
   }
 }
+/*  Rotation couleurs  */
 @keyframes loader {
   0% {
     border-top-color: $shadow;
@@ -82,6 +88,7 @@
     border-left-color: $color-tertiary;
   }
 }
+/*  Changements couleurs texte  */
 @keyframes bienvenue {
   0% {
     color: $color-primary;

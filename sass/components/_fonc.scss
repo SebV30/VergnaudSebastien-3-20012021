@@ -27,7 +27,7 @@
   & .fa-store {
     padding-right: 10px;
   }
-
+  /*  Suppression puces liste ordonnée  */
   & ol {
     margin: auto;
     list-style: none;
@@ -49,6 +49,7 @@
       justify-content: space-around;
     }
   }
+  /*  Rétablissement puce numérotées avec mise en forme  */
   & li::before {
     content: counter(li);
     color: $secondary-font-color;

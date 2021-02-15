@@ -1,3 +1,4 @@
+/*  Arrière plan laoder  */
 .fix-load {
   width: 100%;
   height: 100%;
@@ -12,6 +13,7 @@
   justify-content: center;
   align-content: center;
 }
+/*  LOADER  */
 .loader {
   width: 100px;
   height: 100px;
@@ -40,7 +42,7 @@
     border: 15px solid;
   }
 }
-
+/*  TEXTE LOADER  */
 .bienvenue {
   color: $color-primary;
   position: relative;

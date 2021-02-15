@@ -133,6 +133,7 @@ img {
           font-size: 0.9em;
         }
       }
+      /*  Animation Coche  */
       & .box {
         width: 0;
         background-color: $color-tertiary;
@@ -172,7 +173,7 @@ img {
         }
       }
     }
-
+    /*  Apparition menu avec décalage dans le temps  */
     & .choix-1 {
       animation: anim-menu 1000ms;
       animation-delay: 250ms;
@@ -218,7 +219,7 @@ img {
       animation-delay: 2250ms;
       animation-fill-mode: both;
     }
-
+    /*  Scission des mots au déroulement de la coche  */
     & .plat {
       padding: 10px;
       margin-right: auto;

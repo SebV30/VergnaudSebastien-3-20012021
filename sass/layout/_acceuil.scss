@@ -38,7 +38,7 @@
     @include pc-xl {
       max-width: 40%;
     }
-
+    /*  Positionnement "nouveau" sur image carte  */
     & .post-new {
       width: 100%;
       position: relative;
@@ -62,6 +62,7 @@
       display: flex;
       justify-content: space-between;
       margin-top: -5px;
+      /* Icones Coeur  */
       & .heart {
         & .heart-empty {
           margin-right: 30px;

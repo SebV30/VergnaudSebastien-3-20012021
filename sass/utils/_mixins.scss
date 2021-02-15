@@ -1,3 +1,4 @@
+/*  BOUTONS  */
 @mixin button($width, $margin-bottom) {
   width: $width;
   height: 50px;
@@ -20,13 +21,12 @@
   );
   transition: 750ms;
 }
-
+/*  MEDIA QUERIES  */
 @mixin tablette {
   @media (min-width: $tablette-min) and (max-width: $tablette-max) {
     @content;
   }
 }
-
 @mixin pc {
   @media (min-width: $pc-ecran-min) and (max-width: $pc-ecran-max) {
     @content;

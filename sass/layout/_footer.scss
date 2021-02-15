@@ -57,7 +57,7 @@ footer {
       display: flex;
       justify-content: space-around;
     }
-
+    /*  liens avec icone  */
     & .haut {
       @include tablette {
         display: flex;
@@ -65,6 +65,7 @@ footer {
         margin: 0 100px 15px 0;
       }
     }
+    /*  liens sans icone  */
     & .bas {
       @include tablette {
         display: flex;
